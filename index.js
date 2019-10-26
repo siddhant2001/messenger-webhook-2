@@ -1,6 +1,5 @@
 'use strict';
 
-// Imports dependencies and set up http server
 const
   express = require('express'),
   bodyParser = require('body-parser'),
@@ -39,7 +38,7 @@ app.post('/webhook', (req, res) => {
   // Adds support for GET requests to our webhook
 app.get('/webhook', (req, res) => {
 
-    // Your verify token. Should be a random string.
+    
     let VERIFY_TOKEN = "a"
       
     // Parse the query params
@@ -50,7 +49,7 @@ app.get('/webhook', (req, res) => {
     // Checks if a token and mode is in the query string of the request
     if (mode && token) {
     
-      // Checks the mode and token sent is correct
+      
       if (mode === 'subscribe' && token === VERIFY_TOKEN) {
         
         // Responds with the challenge token from the request
